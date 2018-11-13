@@ -1,2 +1,2 @@
 # Jekyll-Breadcrumb-Microdata
-A ..
+A breadcrumb trail with structured data for Jekyll websites 
