@@ -8,7 +8,7 @@ Copy `index.html` in your `_includes` folder (rename it as you want, i.e. `bread
 
 Style it with your own CSS or use my style, see: `<!-- comments -->`.
 
-If you don't know how **includes** work, go to [Jekyll includes](https://jekyllrb.com/docs/includes/) on Jekyll official website.
+*If you don't know how **includes** work, go to [Jekyll includes](https://jekyllrb.com/docs/includes/) on Jekyll official website.*
 
 ## A breadcrumb trail with structured data for Jekyll websites
 
