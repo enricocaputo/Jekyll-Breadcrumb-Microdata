@@ -4,7 +4,7 @@ A [BreadcrumbList](https://schema.org/BreadcrumbList) is an ItemList consisting 
 
 ## Usage
 
-Copy `index.html` in your `_includes` folder (rename it as you want, i.e. `breadrcrumbs.html`). 
+Copy `breadrcrumbs.html` in your `_includes` folder. 
 
 Style it with your own CSS or use my style, see: `<!-- comments -->`.
 
