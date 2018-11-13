@@ -1,0 +1,87 @@
+<div class="myBreadcrumbTrail">
+<nav class="breadcrumbs"  aria-label="you are here!" role="navigation">
+  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+   <ol class="breadcrumb list-unstyled" itemscope itemtype="http://schema.org/BreadcrumbList">
+     <li class="breadcrumb-item " itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="/">
+           <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1" />
+     </li>
+      {% for crumb in crumbs offset: 1 %}
+      {% if forloop.last %}
+      <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+         <a class="breadcrumb-item-hidden" itemprop="item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">
+            <span itemprop="name">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</span>
+         </a>
+         <meta itemprop="position" content="{{ forloop.index | plus: 1 }}" />
+      </li>
+      {% else %}
+      <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+         <a itemprop="item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">
+            <span itemprop="name">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</span>
+         </a>
+         <meta itemprop="position" content="{{ forloop.index | plus: 1 }}" />
+      </li>
+      {% endif %}
+    {% endfor %}
+   </ol>
+</nav>
+</div>
+
+
+<!-- 
+nav.breadcrumbs {
+  width: 100%;
+  float: left;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  z-index: 0;
+}
+nav.breadcrumbs ol {
+   margin-left: 0;
+}
+nav.breadcrumbs ol li a {
+   color: #818a91;
+   &:hover {
+     color: $theme;
+     text-decoration: none;
+   }
+}
+nav.breadcrumbs .breadcrumb {
+   font-size: 10px;
+   color: #818a91;
+   padding: 0.75rem 1rem;
+   margin-bottom: 1rem;
+   list-style: none;
+   border-radius: 0.25rem;
+}
+nav.breadcrumbs .breadcrumb::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+nav.breadcrumbs .breadcrumb-item {
+   float: left;
+}
+nav.breadcrumbs .breadcrumb-item-hidden {
+   visibility: hidden;
+}
+nav.breadcrumbs .breadcrumb-item+.breadcrumb-item::before {
+   display: inline-block;
+   padding-right: 0.5rem;
+   padding-left: 0.5rem;
+   color: #818a91;
+   content: "/";
+}
+@media (max-width: 768px) {
+  nav.breadcrumbs {
+    visibility: hidden;
+  }
+}
+-->
