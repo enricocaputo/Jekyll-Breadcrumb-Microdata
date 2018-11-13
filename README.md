@@ -24,7 +24,7 @@ Together with breadcrumbs, **structured data** in **Microdata** format are also 
 
 Tested with [Google Structured data](https://search.google.com/structured-data/testing-tool?hl=it)
 
-Good for GitHub Pages
+Good for [GitHub Pages](https://help.github.com/articles/what-is-github-pages/)
 
 ### [Gist](https://gist.github.com/enricocaputo/2509e00403aa4218df28a730ce1aa57a) 
 
