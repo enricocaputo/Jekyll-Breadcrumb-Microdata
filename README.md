@@ -11,7 +11,7 @@ A [BreadcrumbList](https://schema.org/BreadcrumbList) is an ItemList consisting 
   {% include breadcrumbs.html path=page.path title=page.title %}
   ```
 
-3. Style it with your own CSS or use my style, see: `<!-- comments -->
+3. Style it with your own CSS or use my style, see: `<!-- comments -->`
 
 *If you don't know how **includes** work, go to [Jekyll includes](https://jekyllrb.com/docs/includes/) on Jekyll official website.*
 
