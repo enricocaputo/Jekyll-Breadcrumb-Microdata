@@ -4,7 +4,7 @@ A [BreadcrumbList](https://schema.org/BreadcrumbList) is an ItemList consisting 
 
 ## Usage
 
-Copy `breadcrumb.html` in your `_includes` folder. Style it with your own CSS or use my style, see: `<!-- comments -->`.
+Copy `index.html` in your `_includes` folder (rename it as you want, i.e. `breadrcrumbs.html`). Style it with your own CSS or use my style, see: `<!-- comments -->`.
 
 ## A breadcrumb trail with structured data for Jekyll websites
 
