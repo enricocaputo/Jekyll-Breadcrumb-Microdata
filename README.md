@@ -5,7 +5,7 @@ A [BreadcrumbList](https://schema.org/BreadcrumbList) is an ItemList consisting 
 ## Usage
 
 1. Add `breadcrumbs.html` to your site's `_includes` folder
-2. Place the following into your **_layouts** files or diresctly into your pages in the where you want your **breadcrumbs** appear
+2. Place the following into your **_layouts** files or into your pages where you want your **breadcrumbs** appear:
 
   ```liquid
   {% include breadcrumbs.html path=page.path title=page.title %}
